@@ -1,0 +1,169 @@
+/* NavBar.css */
+
+/* General styles for the navbar */
+.navbar {
+  background-color: #c3ccd4; /* Light background */
+  box-shadow: 0 4px 6px rgba(241, 13, 13, 0.1); /* Add slight shadow for depth */
+  padding: 0.75rem 1rem; /* Padding for a comfortable layout */
+}
+
+/* Brand logo */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e68a19;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #007bff; /* Highlight brand link on hover */
+}
+
+/* Toggler button styles */
+.navbar-toggler {
+  border: none;
+  /*color:#0dfd25;*/
+  background-color: #007bff; /* Add some color */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar links */
+.nav-link {
+  color: #e68a19; /* Dark text color */
+  font-size: 1rem;
+  padding: 0.5rem 1rem; /* Spacing for comfort */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #007bff; /* Highlight link on hover */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff; /* Active link color */
+}
+
+/* Icons within nav links */
+.nav-link i {
+  font-size: 1.2rem;
+  margin-right: 0.5rem; /* Space between icon and text */
+}
+
+.navbar-nav.ms-auto {
+  margin-left: auto; /* Empuja este grupo hacia la derecha */
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Opcional: Estilo adicional para separar los íconos si es necesario */
+.navbar-nav.ms-auto .nav-item {
+  margin-left: 0.5rem; /* Espaciado entre elementos */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav {
+      text-align: center;
+      margin-top: 1rem;
+  }
+
+  .nav-link {
+      padding: 0.75rem 1rem;
+  }
+}
+
+/* Custom styles for specific icons (optional) */
+.nav-item .bi-brightness-high {
+  color: #ffc107; /* Sun icon color */
+}
+
+.nav-item .bi-moon {
+  color: #410cf0; /* Moon icon color */
+}
+
+.nav-item .bi-person {
+  color: #0dfd25; /* User icon color */
+}
+
+.nav-item .bi-door-open {
+  color: #dc3545; /* Logout icon color */
+}
+
+/* Contenedor de búsqueda: estilo horizontal */
+.search-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
+  gap: 10px; /* Espaciado horizontal entre los elementos */
+}
+
+/* Caja de búsqueda: opcional para diseño */
+.search-box {
+  padding-right: 36px; /* Tamaño del input de búsqueda */
+}
+
+/* Estilos para resultados de búsqueda (opcional) */
+.ais-Hits-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%; /* Debajo del input de búsqueda */
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 1050; /* Asegura que sobresalga sobre otros elementos */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Opcional: para limitar la altura de los resultados */
+  overflow-y: auto; /* Scroll para resultados largos */
+}
+
+.dark-mode .search-results {
+  position: absolute;
+  top: 100%; /* Debajo del input de búsqueda */
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  background-color: rgb(0, 0, 0);
+  border: 1px solid #ddd;
+  z-index: 1050; /* Asegura que sobresalga sobre otros elementos */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 300px; /* Opcional: para limitar la altura de los resultados */
+  overflow-y: auto; /* Scroll para resultados largos */
+}
+
+.hit-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.hit-item:last-child {
+  border-bottom: none;
+}
+
+.hit-item h6 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hit-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.product-image {
+  border-radius: 4px;
+}

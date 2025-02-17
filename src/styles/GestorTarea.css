@@ -1,0 +1,90 @@
+.gestor-tarea {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.dark-mode .task-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+}
+
+.task-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.task-input button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    color:#000000;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.task-list li.completed span {
+    text-decoration: line-through;
+    color: #000000;
+}
+
+.task-list li span {
+    cursor: pointer;
+    flex: 1;
+}
+
+.task-list li button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.task-list li button:hover {
+    background-color: #c82333;
+}

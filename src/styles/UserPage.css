@@ -1,0 +1,12 @@
+/* UserPage.css */
+div {
+    color: black;
+    font-family: Arial, sans-serif; /* Puedes elegir otra fuente si lo prefieres */
+    line-height: 1.5;
+  }
+
+/*dark-mode .div{
+    color: white;
+    font-family: Arial, sans-serif; /* Puedes elegir otra fuente si lo prefieres 
+    line-height: 1.5;
+}*/

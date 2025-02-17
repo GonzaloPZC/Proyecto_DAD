@@ -1,0 +1,275 @@
+/* App.css */
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  box-sizing: border-box;
+}
+
+/* Root container takes full viewport */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Header styling */
+h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 1rem; /* Eliminar márgenes extra */
+  /*padding: 1rem 0;*/
+  color: #4c00ff;
+}
+
+h2 {
+  text-align: left;
+  color: #000000;
+}
+
+h3{
+  text-align: left;
+  font-size: 1rem;
+  /*margin: 1rem; /* Eliminar márgenes extra */
+  /*padding: 1rem 0;*/
+  color: #5e5e5e;
+}
+
+.dark-mode h3{
+  color: #ffffff;
+}
+
+.dark-mode h2 {
+  color: #ffffff;
+}
+
+.dark-mode h1 {
+  text-align: left;
+  font-size: 2.5rem;
+  margin: 1rem; /* Eliminar márgenes extra */
+  /*padding: 1rem 0;*/
+  color: #ffffff;
+}
+
+/* Navbar styling */
+.navbar {
+  width: 100%; /* Full width for the navbar */
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background-color: #c3ccd4; /* Light background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container for page content */
+.container {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content area styling */
+.container > * {
+  width: 100%;
+  /*max-width: 1200px;/*/
+  background-color: #ffffff;
+  /*color: #000000;*/
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #343a40;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container > * {
+    padding: 1.5rem;
+  }
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.light-mode .navbar {
+  background-color: #c3ccd4;
+  color: #626262;
+}
+
+.light-mode .container > * {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar {
+  background-color: #3c3c3c;
+  color: #f8f9fa;
+}
+
+.dark-mode .navbar-brand{
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+}
+
+.dark-mode .nav-link{
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+}
+
+.dark-mode .container > * {
+  background-color: #3c3c3c;
+  color: #f8f9fa;
+}
+
+/* Smooth transition for mode changes */
+.light-mode, .dark-mode {
+  transition: background-color 0.3s, color 0.3s;
+}
+/* Botones */
+button {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dark-mode button {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+/* Inputs */
+input {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode input {
+  background-color: #000000;
+  color: #f8f9fa;
+}
+
+.dark-mode p{
+  color: #f8f9fa;
+}
+
+.dark-mode strong{
+  color: #bebdbd;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #fff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode table {
+  background-color: #000000;
+  color: #f8f9fa;
+}
+/*
+.dark-mode .hit-price{
+  color: rgb(255, 255, 255);
+    font-weight: bold;
+}*/
+
+
+/* Estilos para el botón de abrir/cerrar el chat */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el chatbox */
+.chatbox {
+  position: fixed;
+  bottom: 80px; /* Ajusta la distancia desde la parte inferior */
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.chat-input button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}

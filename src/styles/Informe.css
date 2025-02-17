@@ -1,0 +1,8 @@
+/* Estilos generales */
+.form-label {
+    color: black; /* Color negro por defecto */
+}
+
+.dark-mode .form-label{
+    color: white;
+}

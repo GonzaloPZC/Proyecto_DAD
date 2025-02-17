@@ -1,0 +1,106 @@
+/* Estilos para el botón de abrir/cerrar el chat */
+.chat-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.chat-toggle-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Estilos para el chatbox */
+.chatbox {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilos para la lista de mensajes */
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para los mensajes */
+.cs-message__content {
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Mensaje del usuario */
+.cs-message--outgoing .cs-message__content {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Mensaje del bot */
+.cs-message--incoming .cs-message__content {
+  background-color: #e5e5ea;
+  color: black;
+  align-self: flex-start;
+}
+
+/* Estilos para la caja de entrada */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos para el campo de entrada */
+.cs-message-input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+/* Estilos para el botón de enviar */
+.cs-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cs-button:hover {
+  background-color: #0056b3;
+}
